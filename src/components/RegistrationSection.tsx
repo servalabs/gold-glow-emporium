@@ -1,7 +1,7 @@
 export const RegistrationSection = () => {
   return (
     <section
-      id="summer-99-section"
+      id="unal-99-section"
       className="relative py-24 md:py-28 lg:py-32 text-white overflow-hidden"
       style={{
         backgroundImage:
@@ -16,16 +16,15 @@ export const RegistrationSection = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
           <h2 className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] px-4">
-            Shree Shasan Samrat Ashok Chandroday – <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Summer <span className="font-grotesk">૯૯</span></span>
+            <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Shree Shasan Samrat Ashok Chandrodaya <span className="font-grotesk">Unalu 99</span></span>
           </h2>
+          <p className="font-cormorant text-base md:text-lg text-gold mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-semibold">
+            Age Limit: 15-40 Years
+          </p>
 
           <h3 className="font-cormorant text-lg md:text-2xl lg:text-3xl font-bold mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-            <span className="text-gold drop-shadow-[0_4px_12px_rgba(194,143,71,0.6)]">Ghoghawala</span> Parivar
+            <span className="text-gold drop-shadow-[0_4px_12px_rgba(194,143,71,0.6)]">Ghoghawala Parivar Ghatkopar ( Sanghani Estate )</span>
           </h3>
-
-          <p className="font-cormorant text-base md:text-xl mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-semibold">
-            Ghatkopar (Sanghani Estate)
-          </p>
 
           <div className="my-6 md:my-8 space-y-2">
             <h4 className="font-cormorant text-xl md:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-medium px-4">
@@ -45,18 +44,6 @@ export const RegistrationSection = () => {
                 <p className="text-base md:text-lg">📍 Oswal Yatrik Bhavan, Palitana</p>
               </div>
             </div>
-          </div>
-
-          <div className="mt-8 md:mt-10">
-            <a
-              href="https://ghoghawala.com/TnC.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 rounded-md bg-gold text-navy font-semibold shadow-elegant border border-gold/60 hover:bg-gold/90 hover:shadow-gold transition-smooth"
-              aria-label="Register Now"
-            >
-              Register Now
-            </a>
           </div>
         </div>
       </div>

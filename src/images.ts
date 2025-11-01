@@ -10,8 +10,8 @@ export const IMAGES = {
   home: {
     hero: {
       slider: {
-        slide1: "https://www.vimalsales.com/ghoghawala99/assets/images/mbnlkj-999x776.png",
-        slide2: "https://www.vimalsales.com/ghoghawala99/assets/images/gregretge-1627x1128.png",
+        slide1: "https://server-assets.b-cdn.net/web/ghogha/1.png",
+        slide2: "https://server-assets.b-cdn.net/web/ghogha/2.png",
         slide3: "https://server-assets.b-cdn.net/web/ghogha/Registration%20Background.jpg",
       },
     },

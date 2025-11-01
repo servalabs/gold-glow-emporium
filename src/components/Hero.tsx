@@ -36,7 +36,7 @@ export const Hero = () => {
   };
 
   const handleSlide3Click = () => {
-    const section = document.getElementById('summer-99-section');
+    const section = document.getElementById('unal-99-section');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -52,7 +52,7 @@ export const Hero = () => {
         <div
           key={index}
           onClick={index === 2 && index === currentSlide ? handleSlide3Click : undefined}
-          className={`absolute inset-0 bg-contain bg-center bg-no-repeat transition-opacity duration-1000 z-10 ${
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 z-10 ${
             index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
           } ${index === 2 && index === currentSlide ? 'cursor-pointer' : ''}`}
           style={{
@@ -105,11 +105,11 @@ export const Hero = () => {
         <div className="absolute inset-0 z-[15] flex items-end justify-end pr-4 md:pr-8 lg:pr-12 pb-24 md:pb-8 lg:pb-12">
           <div className="text-center max-w-[180px] md:max-w-sm lg:max-w-md animate-fade-in">
             <div className="bg-navy/90 backdrop-blur-md rounded-lg p-3 md:p-6 lg:p-7 border border-gold/30 shadow-2xl">
-              <h3 className="font-cormorant text-sm md:text-xl lg:text-2xl font-bold text-gold mb-2 md:mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-tight">
-                Shree Shasan Samrat Ashok Chandroday
+              <h3 className="font-cormorant text-sm md:text-xl lg:text-2xl font-bold text-gold mb-3 md:mb-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-tight">
+                Shree Shasan Samrat Ashok Chandrodaya <span className="font-grotesk">Unalu 99</span>
               </h3>
               <p className="font-cormorant text-xs md:text-sm lg:text-base text-white/90 mb-3 md:mb-5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] leading-tight">
-                <span className="text-gold font-semibold">Summer ૯૯</span> - Join us for the divine pilgrimage
+                Join us for the divine pilgrimage
               </p>
               <button
                 onClick={handleSlide3Click}
