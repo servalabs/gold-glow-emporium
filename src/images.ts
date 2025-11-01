@@ -11,7 +11,7 @@ export const IMAGES = {
     hero: {
       slider: {
         slide1: "https://server-assets.b-cdn.net/web/ghogha/Deraser%20Model.jpg",
-        slide2: "https://server-assets.b-cdn.net/web/ghogha/Registration%20Background.jpg",
+        slide2: "https://server-assets.b-cdn.net/web/ghogha/Deraser%20Top%20View%20with%20Bhagwan.png",
         slide3: "https://server-assets.b-cdn.net/web/ghogha/Ghogha%20Tirth%202.jpg",
       },
     },
