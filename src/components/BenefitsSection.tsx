@@ -2,7 +2,7 @@ import { IMAGES } from '@/images';
 
 export const BenefitsSection = () => {
   return (
-    <section className="py-16 md:py-20 bg-cream relative overflow-hidden min-h-screen flex flex-col justify-center">
+    <section className="py-12 md:py-16 bg-cream relative overflow-hidden min-h-screen flex flex-col justify-center">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>

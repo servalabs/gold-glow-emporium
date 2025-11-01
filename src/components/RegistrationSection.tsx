@@ -2,7 +2,7 @@ export const RegistrationSection = () => {
   return (
     <section
       id="unal-99-section"
-      className="relative py-24 md:py-28 lg:py-32 text-white overflow-hidden"
+      className="relative py-12 md:py-16 lg:py-20 text-white overflow-hidden"
       style={{
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.6)), url('https://server-assets.b-cdn.net/web/ghogha/Registration%20Background.jpg')",
@@ -18,9 +18,6 @@ export const RegistrationSection = () => {
           <h2 className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-semibold mb-4 drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] px-4">
             <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Shree Shasan Samrat Ashok Chandrodaya <span className="font-grotesk">Unalu 99</span></span>
           </h2>
-          <p className="font-cormorant text-base md:text-lg text-gold mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-semibold">
-            Age Limit: 15-40 Years
-          </p>
 
           <h3 className="font-cormorant text-lg md:text-2xl lg:text-3xl font-bold mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
             <span className="text-gold drop-shadow-[0_4px_12px_rgba(194,143,71,0.6)]">Ghoghawala Parivar Ghatkopar ( Sanghani Estate )</span>
@@ -42,6 +39,9 @@ export const RegistrationSection = () => {
               </div>
               <div className="bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 rounded-lg">
                 <p className="text-base md:text-lg">📍 Oswal Yatrik Bhavan, Palitana</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 rounded-lg">
+                <p className="text-base md:text-lg">👥 Age Limit: 15-40 Years</p>
               </div>
             </div>
           </div>

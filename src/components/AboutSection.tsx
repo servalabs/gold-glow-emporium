@@ -2,18 +2,18 @@ import { IMAGES } from '@/images';
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-16 md:py-20 bg-cream relative overflow-hidden min-h-screen flex flex-col justify-center">
+    <section id="about" className="py-8 md:py-12 bg-cream relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-navy mb-4 leading-tight md:leading-normal">
+          <div className="text-center mb-8 md:mb-10 animate-fade-in">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-navy mb-3 md:mb-4 leading-tight md:leading-normal">
               ગિરિરાજ <span className="text-gold">એટલે...</span>
             </h2>
-            <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-gold mx-auto mb-6 md:mb-8"></div>
           </div>
 
           {/* Side-by-side Layout: Image on Left, Text on Right */}

@@ -43,27 +43,56 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[45vh] md:min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background base color for any empty space */}
-      <div className="absolute inset-0 bg-navy" />
+    <section className="relative h-auto md:min-h-screen flex items-center justify-center overflow-hidden bg-navy pt-24 md:pt-28">
+      {/* Background base color for any empty space - desktop only */}
+      <div className="hidden md:block absolute inset-0 bg-navy" />
       
-      {/* Slider Background Images */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          onClick={index === 2 && index === currentSlide ? handleSlide3Click : undefined}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 z-10 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          } ${index === 2 && index === currentSlide ? 'cursor-pointer' : ''}`}
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('${slide}')`,
-          }}
-        />
-      ))}
+      {/* Mobile: Use img tags for proper height adjustment - container fits image */}
+      <div className="relative w-full md:hidden bg-navy">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            onClick={index === 2 && index === currentSlide ? handleSlide3Click : undefined}
+            className={`w-full transition-opacity duration-1000 ease-in-out z-10 ${
+              index === currentSlide 
+                ? 'opacity-100 relative' 
+                : 'opacity-0 pointer-events-none absolute inset-0'
+            } ${index === 2 && index === currentSlide ? 'cursor-pointer' : ''}`}
+          >
+            <img
+              src={slide}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-auto object-contain"
+              style={{
+                filter: 'brightness(0.8)',
+                WebkitFilter: 'brightness(0.8)',
+              }}
+            />
+            {/* Overlay gradient for mobile */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/30 pointer-events-none" />
+          </div>
+        ))}
+      </div>
       
-      {/* Overlay Pattern - Allow pointer events to pass through when slide3 is active */}
+      {/* Desktop: Background images */}
+      <div className="hidden md:block absolute inset-0">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            onClick={index === 2 && index === currentSlide ? handleSlide3Click : undefined}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out z-10 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            } ${index === 2 && index === currentSlide ? 'cursor-pointer' : ''}`}
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('${slide}')`,
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Overlay Pattern - Allow pointer events to pass through when slide3 is active - Desktop only */}
       <div 
-        className={`absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.15)_100%)] ${
+        className={`hidden md:block absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.15)_100%)] ${
           currentSlide === 2 ? 'pointer-events-none' : ''
         }`}
       />
@@ -71,21 +100,21 @@ export const Hero = () => {
       {/* Slider Navigation Buttons */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-smooth"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-1.5 md:p-2 transition-smooth"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="text-white" size={24} />
+        <ChevronLeft className="text-white w-5 h-5 md:w-6 md:h-6" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-smooth"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-1.5 md:p-2 transition-smooth"
         aria-label="Next slide"
       >
-        <ChevronRight className="text-white" size={24} />
+        <ChevronRight className="text-white w-5 h-5 md:w-6 md:h-6" />
       </button>
 
       {/* Slider Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}

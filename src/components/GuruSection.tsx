@@ -35,7 +35,7 @@ export const GuruSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-navy text-white relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-navy text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(194,143,71,0.05)_0%,transparent_70%)]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
