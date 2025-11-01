@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { IMAGES } from '@/images';
 
 // WhatsApp Icon Component
@@ -43,8 +43,8 @@ export const Header = () => {
     window.open('https://wa.me/919167399499', '_blank');
   };
 
-  const handleEmailClick = () => {
-    window.open('mailto:info@ghoghawala.com', '_blank');
+  const handleRegisterClick = () => {
+    window.open('https://ghoghawala.com/Enroll.aspx', '_blank');
   };
 
   return (
@@ -137,15 +137,13 @@ export const Header = () => {
                 <span className="absolute inset-0 bg-gold/5 rounded-md opacity-0 hover:opacity-100 transition-opacity"></span>
               </Link>
 
-              {/* Email Button */}
+              {/* Register Now Button */}
               <button
-                onClick={handleEmailClick}
-                className="relative group ml-2 px-4 py-2 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-lg font-grotesk font-semibold text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-600/50 flex items-center gap-2 overflow-hidden"
+                onClick={handleRegisterClick}
+                className="relative group ml-2 px-4 py-2 bg-gradient-to-r from-gold to-gold/80 text-navy rounded-lg font-grotesk font-semibold text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold/50 flex items-center gap-2 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                <Mail className="w-4 h-4 relative z-10" />
-                <span className="relative z-10 hidden lg:inline">Email</span>
-                <span className="relative z-10 lg:hidden">Email</span>
+                <span className="relative z-10">Register Now</span>
               </button>
 
               {/* WhatsApp Button */}
@@ -211,13 +209,12 @@ export const Header = () => {
               </Link>
               <button
                 onClick={() => {
-                  handleEmailClick();
+                  handleRegisterClick();
                   setIsMobileMenuOpen(false);
                 }}
-                className="mx-4 mt-2 px-6 py-3 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-lg font-grotesk font-semibold text-base transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                className="mx-4 mt-2 px-6 py-3 bg-gradient-to-r from-gold to-gold/80 text-navy rounded-lg font-grotesk font-semibold text-base transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
-                <Mail className="w-5 h-5" />
-                Email Us
+                Register Now
               </button>
               <button
                 onClick={() => {
