@@ -40,10 +40,6 @@ export const Header = () => {
     window.open('https://wa.me/919167399499', '_blank');
   };
 
-  const handleRegisterClick = () => {
-    window.open('https://ghoghawala.com/Enroll.aspx', '_blank');
-  };
-
   return (
     <>
       <header
@@ -94,15 +90,6 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-2 lg:gap-6">
-              {/* Register Now Button */}
-              <button
-                onClick={handleRegisterClick}
-                className="relative group ml-2 px-4 py-2 bg-gradient-to-r from-gold to-gold/80 text-navy rounded-lg font-grotesk font-semibold text-sm lg:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold/50 flex items-center gap-2 overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                <span className="relative z-10">Register Now</span>
-              </button>
-
               {/* WhatsApp Button */}
               <button
                 onClick={handleWhatsAppClick}
@@ -142,15 +129,6 @@ export const Header = () => {
             }`}
           >
             <nav className="flex flex-col py-4">
-              <button
-                onClick={() => {
-                  handleRegisterClick();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="mx-4 mt-2 px-6 py-3 bg-gradient-to-r from-gold to-gold/80 text-navy rounded-lg font-grotesk font-semibold text-base transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-              >
-                Register Now
-              </button>
               <button
                 onClick={() => {
                   handleWhatsAppClick();

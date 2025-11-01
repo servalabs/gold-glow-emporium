@@ -121,13 +121,6 @@ export const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Button 
-              size="lg"
-              className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8 py-6 shadow-gold transition-smooth hover:scale-105"
-              onClick={() => window.open('https://ghoghawala.com/Enroll.aspx', '_blank')}
-            >
-              Register Now
-            </Button>
             <Button
               size="lg"
               variant="outline"

@@ -7,6 +7,7 @@ import { AboutSection } from '@/components/AboutSection';
 import { WhyYatraSection } from '@/components/WhyYatraSection';
 import { BenefitsSection } from '@/components/BenefitsSection';
 import { Footer } from '@/components/Footer';
+import { ScrollUp } from '@/components/ScrollUp';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <WhyYatraSection />
       <BenefitsSection />
       <Footer />
+      <ScrollUp />
     </div>
   );
 };
