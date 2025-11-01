@@ -10,7 +10,7 @@ export const IMAGES = {
   home: {
     hero: {
       slider: {
-        slide1: "https://server-assets.b-cdn.net/web/ghogha/Deraser%20Top%20View.png",
+        slide1: "https://server-assets.b-cdn.net/web/ghogha/Deraser%20Model.jpg",
         slide2: "https://server-assets.b-cdn.net/web/ghogha/Registration%20Background.jpg",
         slide3: "https://server-assets.b-cdn.net/web/ghogha/Ghogha%20Tirth%202.jpg",
       },
@@ -61,4 +61,3 @@ export const IMAGES = {
 } as const;
 
 export type Images = typeof IMAGES;
-

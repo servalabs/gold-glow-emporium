@@ -2,18 +2,22 @@ import { IMAGES } from '@/images';
 
 export const BenefitsSection = () => {
   return (
-    <section className="py-24 bg-cream">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-cream relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-cormorant text-5xl md:text-6xl font-bold text-navy mb-4">
-              <span className="text-gold">99</span> યાત્રામાં શું મેળવશો?
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-navy mb-4">
+              <span className="text-gold">99</span> યાત્રામાં શું મેળવશો???
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in-up">
+          <div className="grid md:grid-cols-5 gap-8 items-center">
+            <div className="space-y-6 animate-fade-in-up md:col-span-2">
               <div className="bg-white p-6 rounded-lg shadow-elegant hover-lift">
                 <p className="font-cormorant text-xl md:text-2xl leading-relaxed text-navy">
                   શાશ્વત તીર્થના અદ્વિતીય સ્પર્શનો આનંદ...
@@ -40,7 +44,7 @@ export const BenefitsSection = () => {
                   પ્રભુના ભક્ત બની,
                 </p>
                 <p className="font-cormorant text-xl md:text-2xl leading-relaxed text-navy font-semibold mt-2">
-                  શેષ જીવનનું સાચું સાફલ્ય પ્રાપ્ત કરશો.
+                  શેષ જીવનનું સાચું સાફલ્ય પ્રાપ્ત કરશો।
                 </p>
               </div>
 
@@ -54,11 +58,11 @@ export const BenefitsSection = () => {
               </div>
             </div>
 
-            <div className="relative hover-3d">
+            <div className="relative hover-3d md:col-span-3">
               <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
               <img
-                src={IMAGES.home.benefits.spiritual}
-                alt="Spiritual Journey"
+                src={IMAGES.deraser.frontView}
+                alt="99 યાત્રામાં શું મેળવશો"
                 className="relative rounded-lg shadow-elegant w-full h-auto"
               />
             </div>

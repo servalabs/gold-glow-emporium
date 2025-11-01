@@ -82,10 +82,14 @@ export const Header = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-gold leading-tight group-hover:text-gold-light transition-colors">
+                <span className={`font-playfair text-xl md:text-2xl lg:text-3xl font-bold leading-tight group-hover:text-gold-light transition-colors ${
+                  isScrolled ? 'text-gold' : 'text-gold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'
+                }`}>
                   Ghoghawala
                 </span>
-                <span className="font-grotesk text-[10px] md:text-xs text-white/70 tracking-wider uppercase">
+                <span className={`font-grotesk text-[10px] md:text-xs tracking-wider uppercase ${
+                  isScrolled ? 'text-white/70' : 'text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
+                }`}>
                   Parivar
                 </span>
               </div>
@@ -98,7 +102,9 @@ export const Header = () => {
                 className={`relative px-4 py-2 font-grotesk text-base lg:text-lg font-medium transition-all duration-300 ${
                   isActive('/')
                     ? 'text-gold'
-                    : 'text-white/90 hover:text-gold'
+                    : isScrolled 
+                      ? 'text-white/90 hover:text-gold' 
+                      : 'text-white hover:text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
                 }`}
               >
                 <span className="relative z-10">Home</span>
@@ -116,7 +122,9 @@ export const Header = () => {
                 className={`relative px-4 py-2 font-grotesk text-base lg:text-lg font-medium transition-all duration-300 ${
                   isActive('/contact')
                     ? 'text-gold'
-                    : 'text-white/90 hover:text-gold'
+                    : isScrolled 
+                      ? 'text-white/90 hover:text-gold' 
+                      : 'text-white hover:text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
                 }`}
               >
                 <span className="relative z-10">Contact</span>
@@ -154,7 +162,11 @@ export const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden relative z-10 text-white hover:text-gold transition-all duration-300 p-2 rounded-lg hover:bg-white/10"
+              className={`md:hidden relative z-10 transition-all duration-300 p-2 rounded-lg hover:bg-white/10 ${
+                isScrolled 
+                  ? 'text-white hover:text-gold' 
+                  : 'text-white hover:text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
+              }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -180,7 +192,7 @@ export const Header = () => {
                 className={`px-6 py-3 font-grotesk text-lg font-medium transition-all duration-300 ${
                   isActive('/')
                     ? 'text-gold bg-gold/10 border-l-4 border-gold'
-                    : 'text-white/90 hover:text-gold hover:bg-white/5'
+                    : 'text-white hover:text-gold hover:bg-white/5'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -191,7 +203,7 @@ export const Header = () => {
                 className={`px-6 py-3 font-grotesk text-lg font-medium transition-all duration-300 ${
                   isActive('/contact')
                     ? 'text-gold bg-gold/10 border-l-4 border-gold'
-                    : 'text-white/90 hover:text-gold hover:bg-white/5'
+                    : 'text-white hover:text-gold hover:bg-white/5'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
