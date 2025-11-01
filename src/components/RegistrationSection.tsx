@@ -23,6 +23,15 @@ export const RegistrationSection = () => {
             <span className="text-gold drop-shadow-[0_4px_12px_rgba(194,143,71,0.6)]">Ghoghawala Parivar Ghatkopar ( Sanghani Estate )</span>
           </h3>
 
+          {/* Registration Notice */}
+          <div className="my-6 md:my-8">
+            <div className="bg-gold/20 backdrop-blur-sm border-2 border-gold/50 rounded-lg px-4 md:px-6 py-3 md:py-4 shadow-lg shadow-gold/30 animate-pulse">
+              <p className="font-cormorant text-base md:text-lg lg:text-xl text-gold font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                📢 Registration will open on <span className="text-white">5th November at 11 AM</span>
+              </p>
+            </div>
+          </div>
+
           <div className="my-6 md:my-8 space-y-2">
             <h4 className="font-cormorant text-xl md:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-medium px-4">
               શ્રી સિદ્ધ ગિરિરાજ ૯૯ યાત્રા અનુષ્ઠાન
