@@ -3,7 +3,7 @@ import { IMAGES } from '@/images';
 export const GuruSection = () => {
   const gurus = [
     {
-      name: "પરમ પૂજ્ય આચાર્ય ભગવંત શ્રી નેમિ સૂરીશ્વરજી મહારાજા",
+      name: "શાસન સમ્રાટ પરમ પૂજ્ય આચાર્ય ભગવંત શ્રી નેમિ સૂરીશ્વરજી મહારાજા",
       title: "અદ્વિતીય કૃપા દાન દાતા",
       image: IMAGES.gurus.guru1
     },

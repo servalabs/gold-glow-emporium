@@ -89,7 +89,7 @@ export const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center pt-24 md:pt-32 lg:pt-40">
         <div className="animate-fade-in-up">
           <h2 className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-4 drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] px-4">
-            Shree Shasan Samrat Ashok Chandroday – <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Summer <span className="font-grotesk">99</span></span>
+            Shree Shasan Samrat Ashok Chandroday – <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Summer <span className="font-grotesk">૯૯</span></span>
           </h2>
           
           <h1 className="font-cormorant text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">

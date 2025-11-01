@@ -11,7 +11,7 @@ export const BenefitsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold text-navy mb-4">
-              <span className="text-gold font-grotesk">99</span> યાત્રામાં શું મેળવશો???
+              <span className="text-gold font-grotesk">૯૯</span> યાત્રામાં શું મેળવશો???
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           </div>
@@ -67,7 +67,7 @@ export const BenefitsSection = () => {
                 <div className="relative rounded-lg overflow-hidden shadow-elegant">
                   <img
                     src={IMAGES.deraser.frontView}
-                    alt="99 યાત્રામાં શું મેળવશો"
+                    alt="૯૯ યાત્રામાં શું મેળવશો"
                     className="w-full h-auto transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
                   />
                 </div>
