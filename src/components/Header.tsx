@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { IMAGES } from '@/images';
 
@@ -18,7 +18,6 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     let ticking = false;
@@ -36,8 +35,6 @@ export const Header = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const isActive = (path: string) => location.pathname === path;
 
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/919167399499', '_blank');
@@ -97,46 +94,6 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-2 lg:gap-6">
-              <Link
-                to="/"
-                className={`relative px-4 py-2 font-grotesk text-base lg:text-lg font-medium transition-all duration-300 ${
-                  isActive('/')
-                    ? 'text-gold'
-                    : isScrolled 
-                      ? 'text-white/90 hover:text-gold' 
-                      : 'text-white hover:text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
-                }`}
-              >
-                <span className="relative z-10">Home</span>
-                {isActive('/') && (
-                  <>
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"></span>
-                    <span className="absolute inset-0 bg-gold/5 rounded-md"></span>
-                  </>
-                )}
-                <span className="absolute inset-0 bg-gold/5 rounded-md opacity-0 hover:opacity-100 transition-opacity"></span>
-              </Link>
-              
-              <Link
-                to="/contact"
-                className={`relative px-4 py-2 font-grotesk text-base lg:text-lg font-medium transition-all duration-300 ${
-                  isActive('/contact')
-                    ? 'text-gold'
-                    : isScrolled 
-                      ? 'text-white/90 hover:text-gold' 
-                      : 'text-white hover:text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
-                }`}
-              >
-                <span className="relative z-10">Contact</span>
-                {isActive('/contact') && (
-                  <>
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"></span>
-                    <span className="absolute inset-0 bg-gold/5 rounded-md"></span>
-                  </>
-                )}
-                <span className="absolute inset-0 bg-gold/5 rounded-md opacity-0 hover:opacity-100 transition-opacity"></span>
-              </Link>
-
               {/* Register Now Button */}
               <button
                 onClick={handleRegisterClick}
@@ -185,28 +142,6 @@ export const Header = () => {
             }`}
           >
             <nav className="flex flex-col py-4">
-              <Link
-                to="/"
-                className={`px-6 py-3 font-grotesk text-lg font-medium transition-all duration-300 ${
-                  isActive('/')
-                    ? 'text-gold bg-gold/10 border-l-4 border-gold'
-                    : 'text-white hover:text-gold hover:bg-white/5'
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                to="/contact"
-                className={`px-6 py-3 font-grotesk text-lg font-medium transition-all duration-300 ${
-                  isActive('/contact')
-                    ? 'text-gold bg-gold/10 border-l-4 border-gold'
-                    : 'text-white hover:text-gold hover:bg-white/5'
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
               <button
                 onClick={() => {
                   handleRegisterClick();
