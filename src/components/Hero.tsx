@@ -100,14 +100,14 @@ export const Hero = () => {
       {/* Slider Navigation Buttons */}
       <button
         onClick={goToPrevious}
-        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-1.5 md:p-2 transition-smooth"
+        className="absolute left-2 md:left-4 top-[70%] md:top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-1.5 md:p-2 transition-smooth"
         aria-label="Previous slide"
       >
         <ChevronLeft className="text-white w-5 h-5 md:w-6 md:h-6" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-1.5 md:p-2 transition-smooth"
+        className="absolute right-2 md:right-4 top-[70%] md:top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-1.5 md:p-2 transition-smooth"
         aria-label="Next slide"
       >
         <ChevronRight className="text-white w-5 h-5 md:w-6 md:h-6" />
