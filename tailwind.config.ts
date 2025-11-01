@@ -15,7 +15,10 @@ export default {
     extend: {
       fontFamily: {
         'cormorant': ['Cormorant Garamond', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'grotesk': ['Space Grotesk', 'sans-serif'],
+        'outfit': ['Outfit', 'sans-serif'],
+        'sans': ['Outfit', 'Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,3 +1,5 @@
+import { IMAGES } from '@/images';
+
 export const BenefitsSection = () => {
   return (
     <section className="py-24 bg-cream">
@@ -55,7 +57,7 @@ export const BenefitsSection = () => {
             <div className="relative hover-3d">
               <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
               <img
-                src="https://www.vimalsales.com/ghoghawala99/assets/images/whatsapp20image202025-10-2820at2020.45.12-eb609020-1184x633.jpeg"
+                src={IMAGES.home.benefits.spiritual}
                 alt="Spiritual Journey"
                 className="relative rounded-lg shadow-elegant w-full h-auto"
               />

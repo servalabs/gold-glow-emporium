@@ -1,3 +1,5 @@
+import { IMAGES } from '@/images';
+
 export const WhyYatraSection = () => {
   return (
     <section className="py-24 bg-navy text-white relative overflow-hidden">
@@ -18,7 +20,7 @@ export const WhyYatraSection = () => {
             <div className="relative hover-3d order-2 md:order-1">
               <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
               <img
-                src="https://www.vimalsales.com/ghoghawala99/assets/images/whatsapp20image202025-10-2820at2019.34.50-81b5b94a-720x765.jpeg"
+                src={IMAGES.home.whyYatra.palitana}
                 alt="Palitana Yatra"
                 className="relative rounded-lg shadow-gold w-full h-auto"
               />

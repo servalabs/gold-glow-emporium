@@ -1,24 +1,36 @@
+import { IMAGES } from '@/images';
+
 export const GuruSection = () => {
   const gurus = [
     {
       name: "પરમ પૂજ્ય આચાર્ય ભગવંત શ્રી નેમિ સૂરીશ્વરજી મહારાજા",
       title: "અદ્વિતીય કૃપા દાન દાતા",
-      image: "https://www.vimalsales.com/ghoghawala99/assets/images/120-20nemisuri20dada-537x537.jpg"
+      image: IMAGES.gurus.guru1
     },
     {
       name: "પરમ પૂજ્ય આચાર્ય દેવ શ્રી ચંદ્રોદય સુરીશ્વરજી મહારાજ સાહેબ",
       title: "દિવ્ય આશીર્વાદ દાતા",
-      image: "https://www.vimalsales.com/ghoghawala99/assets/images/220-20chandrodaysuri20dada-537x537.jpeg"
+      image: IMAGES.gurus.guru2
     },
     {
       name: "પરમ પૂજ્ય આચાર્યદેવ શ્રી અશોકચંદ્ર સૂરીશ્વરજી મહારાજ સાહેબ",
       title: "દિવ્ય આશીર્વાદ દાતા",
-      image: "https://www.vimalsales.com/ghoghawala99/assets/images/320-20ashokchandrasuri20dada-537x537.jpeg"
+      image: IMAGES.gurus.guru3
     },
     {
       name: "પરમ પૂજ્ય આચાર્યદેવ શ્રી સોમચંદ્ર સુરીશ્વરજી મહારાજ સાહેબ",
       title: "દિવ્ય આશીર્વાદ દાતા",
-      image: "https://www.vimalsales.com/ghoghawala99/assets/images/420-20somchandrasuri20dada-537x537.jpeg"
+      image: IMAGES.gurus.guru4
+    },
+    {
+      name: "પરમ પૂજ્ય આચાર્યદેવ",
+      title: "દિવ્ય આશીર્વાદ દાતા",
+      image: IMAGES.gurus.guru5
+    },
+    {
+      name: "પરમ પૂજ્ય આચાર્યદેવ",
+      title: "દિવ્ય આશીર્વાદ દાતા",
+      image: IMAGES.gurus.guru6
     }
   ];
 
@@ -34,25 +46,21 @@ export const GuruSection = () => {
           <div className="w-24 h-1 bg-gold mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {gurus.map((guru, index) => (
             <div
               key={index}
               className="group animate-fade-in-up hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-gold/20 hover:border-gold/50 transition-smooth shadow-elegant">
-                <div className="relative mb-4 overflow-hidden rounded-lg">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-gold/20 hover:border-gold/50 transition-smooth shadow-elegant">
+                <div className="relative overflow-hidden rounded-lg">
                   <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-20 transition-opacity"></div>
                   <img
                     src={guru.image}
                     alt={guru.name}
                     className="w-full h-auto aspect-square object-cover transform group-hover:scale-110 transition-smooth"
                   />
-                </div>
-                <div className="text-center">
-                  <p className="text-gold font-semibold mb-2 text-sm">{guru.title}</p>
-                  <p className="font-cormorant text-lg leading-tight">{guru.name}</p>
                 </div>
               </div>
             </div>

@@ -1,3 +1,5 @@
+import { IMAGES } from '@/images';
+
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 bg-cream">
@@ -32,7 +34,7 @@ export const AboutSection = () => {
             <div className="relative hover-3d">
               <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
               <img
-                src="https://www.vimalsales.com/ghoghawala99/assets/images/image-8.jpeg"
+                src={IMAGES.home.about.temple}
                 alt="Shatrunjaya Temple"
                 className="relative rounded-lg shadow-elegant w-full h-auto"
               />
