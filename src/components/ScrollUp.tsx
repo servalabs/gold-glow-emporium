@@ -30,7 +30,7 @@ export const ScrollUp = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 left-6 z-40 w-14 h-14 bg-gradient-to-r from-gold to-gold/80 text-navy rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-gold/50 animate-float"
+          className="fixed bottom-6 right-4 md:right-8 z-40 w-14 h-14 bg-gradient-to-r from-gold to-gold/80 text-navy rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 hover:shadow-gold/50 animate-float"
           aria-label="Scroll to top"
         >
           <ArrowUp size={24} className="relative z-10" />

@@ -12,7 +12,7 @@ export const IMAGES = {
       slider: {
         slide1: "https://server-assets.b-cdn.net/web/ghogha/Deraser%20Model.jpg",
         slide2: "https://server-assets.b-cdn.net/web/ghogha/Deraser%20Top%20View%20with%20Bhagwan.png",
-        slide3: "https://server-assets.b-cdn.net/web/ghogha/Ghogha%20Tirth%202.jpg",
+        slide3: "https://server-assets.b-cdn.net/web/ghogha/Registration%20Background.jpg",
       },
     },
     about: {
@@ -56,7 +56,7 @@ export const IMAGES = {
     guru6: "https://server-assets.b-cdn.net/web/ghogha/Guru%206.jpg",
   },
   logo: {
-    parivar: "https://server-assets.b-cdn.net/web/ghogha/Parivar%20Logo.png",
+    parivar: "https://server-assets.b-cdn.net/web/ghogha/Logo.png",
   },
 } as const;
 

@@ -30,7 +30,7 @@ export const CustomCursor = () => {
   return (
     <>
       <div
-        className="fixed top-0 left-0 pointer-events-none z-50 mix-blend-difference"
+        className="hidden md:block fixed top-0 left-0 pointer-events-none z-50 mix-blend-difference"
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
           transition: 'transform 0.05s ease-out',
@@ -43,7 +43,7 @@ export const CustomCursor = () => {
         />
       </div>
       <div
-        className="fixed top-0 left-0 pointer-events-none z-50 mix-blend-difference"
+        className="hidden md:block fixed top-0 left-0 pointer-events-none z-50 mix-blend-difference"
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,
           transition: 'transform 0.15s ease-out',

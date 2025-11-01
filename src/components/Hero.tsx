@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { IMAGES } from '@/images';
 
 export const Hero = () => {
@@ -30,10 +30,7 @@ export const Hero = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const scrollToSection = () => {
-    const aboutSection = document.getElementById('about');
-    aboutSection?.scrollIntoView({ behavior: 'smooth' });
-  };
+  
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -85,50 +82,7 @@ export const Hero = () => {
         ))}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center pt-24 md:pt-32 lg:pt-40">
-        <div className="animate-fade-in-up">
-          <h2 className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-4 drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] px-4">
-            Shree Shasan Samrat Ashok Chandroday – <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Summer <span className="font-grotesk">૯૯</span></span>
-          </h2>
-          
-          <h1 className="font-cormorant text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-            <span className="text-gold drop-shadow-[0_4px_12px_rgba(194,143,71,0.6)]">Ghoghawala</span> <span className="drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">Parivar</span>
-          </h1>
-          
-          <p className="font-cormorant text-lg md:text-xl text-white mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-semibold">
-            Ghatkopar (Sanghani Estate)
-          </p>
-
-          <div className="my-8 space-y-2">
-            <h3 className="font-cormorant text-2xl md:text-3xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-medium px-4">
-              શ્રી સિદ્ધ ગિરિરાજ ૯૯ યાત્રા અનુષ્ઠાન
-            </h3>
-          </div>
-
-          <div className="flex flex-col items-center gap-4 my-8">
-            <div className="bg-navy/80 backdrop-blur-md px-8 py-4 rounded-lg border border-gold/30 shadow-gold">
-              <p className="text-gold font-semibold text-xl">11th Year</p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4 text-white">
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-                <p className="text-lg">🗓 11th April, 2026</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-                <p className="text-lg">📍 Oswal Yatrik Bhavan, Palitana</p>
-              </div>
-            </div>
-          </div>
-
-          <button 
-            onClick={scrollToSection}
-            className="mt-16 animate-bounce inline-block text-gold hover:text-gold-light transition-smooth"
-            aria-label="Scroll to content"
-          >
-            <ArrowDown size={40} />
-          </button>
-        </div>
-      </div>
+      {/* Intentionally removed text content; slider only */}
     </section>
   );
 };

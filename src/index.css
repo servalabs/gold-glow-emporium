@@ -172,3 +172,13 @@ All colors MUST be HSL.
     display: none;
   }
 }
+
+/* Mobile typography refinements */
+@layer utilities {
+  @media (max-width: 640px) {
+    /* Tighten general paragraph line-height on small screens */
+    .leading-relaxed {
+      line-height: 1.5;
+    }
+  }
+}

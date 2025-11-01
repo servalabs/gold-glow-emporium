@@ -102,9 +102,9 @@ export const Header = () => {
               </button>
             </nav>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Hidden on mobile */}
             <button
-              className={`md:hidden relative z-10 transition-all duration-300 p-2 rounded-lg hover:bg-white/10 ${
+              className={`hidden relative z-10 transition-all duration-300 p-2 rounded-lg hover:bg-white/10 ${
                 isScrolled 
                   ? 'text-white hover:text-gold' 
                   : 'text-white hover:text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
@@ -120,9 +120,9 @@ export const Header = () => {
             </button>
           </div>
 
-          {/* Mobile Navigation */}
+          {/* Mobile Navigation - Hidden on mobile */}
           <div
-            className={`md:hidden absolute top-full left-0 right-0 bg-navy/98 backdrop-blur-xl border-t border-gold/10 overflow-hidden transition-all duration-500 ${
+            className={`hidden absolute top-full left-0 right-0 bg-navy/98 backdrop-blur-xl border-t border-gold/10 overflow-hidden transition-all duration-500 ${
               isMobileMenuOpen
                 ? 'max-h-96 opacity-100 shadow-2xl'
                 : 'max-h-0 opacity-0'
@@ -143,17 +143,6 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      
-      {/* Floating WhatsApp Button (Mobile only) */}
-      <a
-        href="https://wa.me/919167399499"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 md:hidden z-40 w-14 h-14 bg-gradient-to-r from-[#25D366] to-[#128C7E] rounded-full shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-transform duration-300 animate-float"
-        aria-label="WhatsApp"
-      >
-        <WhatsAppIcon className="w-7 h-7" />
-      </a>
     </>
   );
 };

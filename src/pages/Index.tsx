@@ -2,6 +2,7 @@ import { Header } from '@/components/Header';
 import { CustomCursor } from '@/components/CustomCursor';
 import { Hero } from '@/components/Hero';
 import { UnaluNavvanuSection } from '@/components/UnaluNavvanuSection';
+import { RegistrationSection } from '@/components/RegistrationSection';
 import { GuruSection } from '@/components/GuruSection';
 import { AboutSection } from '@/components/AboutSection';
 import { WhyYatraSection } from '@/components/WhyYatraSection';
@@ -17,6 +18,7 @@ const Index = () => {
       <CustomCursor />
       <Hero />
       <UnaluNavvanuSection />
+      <RegistrationSection />
       <GuruSection />
       <AboutSection />
       <WhyYatraSection />
