@@ -42,20 +42,20 @@ All colors MUST be HSL.
     --gold: 45 85% 55%;
     --gold-light: 45 85% 70%;
     --gold-dark: 42 75% 45%;
-    --navy: 200 85% 85%;
-    --navy-light: 200 75% 90%;
+    --navy: 220 30% 10%;
+    --navy-light: 220 25% 20%;
     --cream: 40 30% 96%;
     --cream-dark: 40 25% 90%;
 
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(45 85% 55%), hsl(42 75% 45%));
-    --gradient-navy: linear-gradient(180deg, hsl(200 85% 85%), hsl(200 75% 90%));
-    --gradient-elegant: linear-gradient(135deg, hsl(200 85% 85%) 0%, hsl(200 75% 90%) 100%);
+    --gradient-navy: linear-gradient(180deg, hsl(220 30% 10%), hsl(220 25% 20%));
+    --gradient-elegant: linear-gradient(135deg, hsl(220 30% 10%) 0%, hsl(220 25% 20%) 100%);
 
     /* Shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(200 85% 85% / 0.3);
+    --shadow-elegant: 0 10px 40px -10px hsl(220 30% 10% / 0.3);
     --shadow-gold: 0 8px 32px -8px hsl(45 85% 55% / 0.4);
-    --shadow-soft: 0 4px 20px -4px hsl(200 85% 85% / 0.1);
+    --shadow-soft: 0 4px 20px -4px hsl(220 30% 10% / 0.1);
 
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
