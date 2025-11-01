@@ -27,7 +27,7 @@ export const Hero = () => {
             <img 
               src="https://www.vimalsales.com/ghoghawala99/assets/images/mbnlkj-999x776.png" 
               alt="Ghoghawala Logo" 
-              className="w-32 h-32 mx-auto mb-8 animate-float"
+              className="w-32 h-32 mx-auto mb-8"
             />
           </div>
           
