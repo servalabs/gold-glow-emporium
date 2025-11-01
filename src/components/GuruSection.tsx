@@ -46,7 +46,7 @@ export const GuruSection = () => {
           <div className="w-24 h-1 bg-gold mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-16">
           {gurus.map((guru, index) => (
             <div
               key={index}
@@ -54,12 +54,18 @@ export const GuruSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-gold/20 hover:border-gold/50 transition-smooth shadow-elegant">
-                <div className="relative overflow-hidden rounded-lg">
-                  <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                <div className="relative overflow-hidden rounded-lg aspect-square">
+                  <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-20 transition-opacity z-10"></div>
                   <img
                     src={guru.image}
                     alt={guru.name}
-                    className="w-full h-auto aspect-square object-cover transform group-hover:scale-110 transition-smooth"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-smooth"
+                    style={{ 
+                      objectFit: 'cover',
+                      objectPosition: 'center',
+                      width: '100%',
+                      height: '100%'
+                    }}
                   />
                 </div>
               </div>

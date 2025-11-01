@@ -8,7 +8,7 @@ export const WhyYatraSection = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-4">
               <span className="text-gold">99</span> યાત્રા કેમ?
@@ -17,7 +17,8 @@ export const WhyYatraSection = () => {
           </div>
 
           <div className="grid md:grid-cols-5 gap-8 items-center">
-            <div className="relative hover-3d order-2 md:order-1 md:col-span-3">
+            {/* Image Card */}
+            <div className="relative hover-3d order-2 md:order-1 md:col-span-2">
               <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
               <img
                 src={IMAGES.bhagwan.bhagwan2}
@@ -26,7 +27,8 @@ export const WhyYatraSection = () => {
               />
             </div>
 
-            <div className="space-y-6 animate-fade-in-up order-1 md:order-2 md:col-span-2">
+            {/* Text Content */}
+            <div className="space-y-6 animate-fade-in-up order-1 md:order-2 md:col-span-3">
               <p className="font-cormorant text-xl md:text-2xl leading-relaxed">
                 <span className="text-gold font-semibold">કારણ કે —</span>
               </p>
