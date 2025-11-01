@@ -46,28 +46,40 @@ export const GuruSection = () => {
           <div className="w-24 h-1 bg-gold mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 lg:gap-6 mb-16">
           {gurus.map((guru, index) => (
             <div
               key={index}
               className="group animate-fade-in-up hover-lift"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-gold/20 hover:border-gold/50 transition-smooth shadow-elegant">
-                <div className="relative overflow-hidden rounded-lg aspect-square">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-2 md:p-3 lg:p-4 border border-gold/20 hover:border-gold/50 transition-smooth shadow-elegant cursor-pointer h-full">
+                <div className="relative overflow-hidden rounded-lg aspect-[3/4] w-full">
                   <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-20 transition-opacity z-10"></div>
                   <img
                     src={guru.image}
                     alt={guru.name}
-                    className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-smooth"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-125 transition-transform duration-500 ease-in-out"
                     style={{ 
                       objectFit: 'cover',
                       objectPosition: 'center',
-                      width: '100%',
-                      height: '100%'
                     }}
                   />
                 </div>
+                {(guru.name || guru.title) && (
+                  <div className="mt-3 text-center">
+                    {guru.name && (
+                      <p className="text-sm font-cormorant text-white/90 group-hover:text-gold transition-colors line-clamp-2">
+                        {guru.name}
+                      </p>
+                    )}
+                    {guru.title && (
+                      <p className="text-xs text-gold/70 mt-1">
+                        {guru.title}
+                      </p>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
