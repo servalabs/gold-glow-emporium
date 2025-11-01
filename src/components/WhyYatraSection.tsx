@@ -10,7 +10,7 @@ export const WhyYatraSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-4">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-4 leading-tight md:leading-normal">
               <span className="text-gold font-grotesk">૯૯</span> યાત્રા કેમ?
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
@@ -28,7 +28,7 @@ export const WhyYatraSection = () => {
             </div>
 
             {/* Text Content */}
-            <div className="space-y-6 animate-fade-in-up order-1 md:order-2 md:col-span-3">
+            <div className="space-y-6 animate-fade-in-up order-1 md:order-2 md:col-span-3 yatra-kem-section">
               <p className="font-cormorant text-xl md:text-2xl leading-relaxed">
                 <span className="text-gold font-semibold">કારણ કે —</span>
               </p>

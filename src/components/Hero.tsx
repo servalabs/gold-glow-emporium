@@ -11,12 +11,17 @@ export const Hero = () => {
   ];
 
   useEffect(() => {
+    const getIntervalTime = (slideIndex: number) => {
+      // Slide3 (index 2) stays for 5x longer (25 seconds)
+      return slideIndex === 2 ? 25000 : 5000;
+    };
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Auto-rotate every 5 seconds
+    }, getIntervalTime(currentSlide));
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [currentSlide, slides.length]);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
@@ -30,25 +35,38 @@ export const Hero = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  
+  const handleSlide3Click = () => {
+    const section = document.getElementById('summer-99-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[45vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background base color for any empty space */}
+      <div className="absolute inset-0 bg-navy" />
+      
       {/* Slider Background Images */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
+          onClick={index === 2 && index === currentSlide ? handleSlide3Click : undefined}
+          className={`absolute inset-0 bg-contain bg-center bg-no-repeat transition-opacity duration-1000 z-10 ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          } ${index === 2 && index === currentSlide ? 'cursor-pointer' : ''}`}
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('${slide}')`,
           }}
         />
       ))}
       
-      {/* Overlay Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.15)_100%)]" />
+      {/* Overlay Pattern - Allow pointer events to pass through when slide3 is active */}
+      <div 
+        className={`absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.15)_100%)] ${
+          currentSlide === 2 ? 'pointer-events-none' : ''
+        }`}
+      />
 
       {/* Slider Navigation Buttons */}
       <button
@@ -82,7 +100,30 @@ export const Hero = () => {
         ))}
       </div>
 
-      {/* Intentionally removed text content; slider only */}
+      {/* Slide3 Intro Text and Button - Only visible when slide3 is active */}
+      {currentSlide === 2 && (
+        <div className="absolute inset-0 z-[15] flex items-end justify-end pr-4 md:pr-8 lg:pr-12 pb-24 md:pb-8 lg:pb-12">
+          <div className="text-center max-w-[180px] md:max-w-sm lg:max-w-md animate-fade-in">
+            <div className="bg-navy/90 backdrop-blur-md rounded-lg p-3 md:p-6 lg:p-7 border border-gold/30 shadow-2xl">
+              <h3 className="font-cormorant text-sm md:text-xl lg:text-2xl font-bold text-gold mb-2 md:mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-tight">
+                Shree Shasan Samrat Ashok Chandroday
+              </h3>
+              <p className="font-cormorant text-xs md:text-sm lg:text-base text-white/90 mb-3 md:mb-5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] leading-tight">
+                <span className="text-gold font-semibold">Summer ૯૯</span> - Join us for the divine pilgrimage
+              </p>
+              <button
+                onClick={handleSlide3Click}
+                className="inline-flex items-center justify-center gap-2 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-3.5 bg-gold text-navy font-semibold text-xs md:text-sm lg:text-base rounded-lg hover:bg-gold/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-gold/50 border border-gold/60 w-full"
+              >
+                <span>Learn More</span>
+                <svg className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -15,7 +15,11 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export const Footer = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/919167399499', '_blank');
+    const phoneNumber = '919167799899';
+    const message = 'I am interested in 99 yatra and am contacting through website';
+    // Using api.whatsapp.com format which handles pre-filled messages better
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
 
   const handleEmailClick = () => {

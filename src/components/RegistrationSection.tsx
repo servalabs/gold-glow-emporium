@@ -1,6 +1,7 @@
 export const RegistrationSection = () => {
   return (
     <section
+      id="summer-99-section"
       className="relative py-24 md:py-28 lg:py-32 text-white overflow-hidden"
       style={{
         backgroundImage:

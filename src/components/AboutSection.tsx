@@ -10,7 +10,7 @@ export const AboutSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-navy mb-4">
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold text-navy mb-4 leading-tight md:leading-normal">
               ગિરિરાજ <span className="text-gold">એટલે...</span>
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
 import { IMAGES } from '@/images';
 
 // WhatsApp Icon Component
@@ -17,7 +16,6 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
@@ -37,7 +35,11 @@ export const Header = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/919167399499', '_blank');
+    const phoneNumber = '919167799899';
+    const message = 'I am interested in 99 yatra and am contacting through website';
+    // Using api.whatsapp.com format which handles pre-filled messages better
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
   };
 
   return (
@@ -102,47 +104,20 @@ export const Header = () => {
               </button>
             </nav>
 
-            {/* Mobile Menu Button - Hidden on mobile */}
+            {/* Mobile WhatsApp Button */}
             <button
-              className={`hidden relative z-10 transition-all duration-300 p-2 rounded-lg hover:bg-white/10 ${
-                isScrolled 
-                  ? 'text-white hover:text-gold' 
-                  : 'text-white hover:text-gold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
+              onClick={handleWhatsAppClick}
+              className={`md:hidden relative z-10 p-2.5 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#25D366]/50 ${
+                isScrolled ? '' : 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]'
               }`}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label="WhatsApp"
             >
-              <div className="relative w-6 h-6">
-                <span className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'}`}></span>
-                <span className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'}`}></span>
-              </div>
+              <WhatsAppIcon className="w-5 h-5" />
             </button>
-          </div>
-
-          {/* Mobile Navigation - Hidden on mobile */}
-          <div
-            className={`hidden absolute top-full left-0 right-0 bg-navy/98 backdrop-blur-xl border-t border-gold/10 overflow-hidden transition-all duration-500 ${
-              isMobileMenuOpen
-                ? 'max-h-96 opacity-100 shadow-2xl'
-                : 'max-h-0 opacity-0'
-            }`}
-          >
-            <nav className="flex flex-col py-4">
-              <button
-                onClick={() => {
-                  handleWhatsAppClick();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="mx-4 mt-2 px-6 py-3 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white rounded-lg font-grotesk font-semibold text-base transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <WhatsAppIcon className="w-5 h-5" />
-                WhatsApp Us
-              </button>
-            </nav>
           </div>
         </div>
       </header>
     </>
   );
 };
+
