@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IMAGES } from '@/images';
 
@@ -118,17 +117,6 @@ export const Hero = () => {
                 <p className="text-lg">📍 Oswal Yatrik Bhavan, Palitana</p>
               </div>
             </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white bg-transparent !text-white hover:bg-white hover:!text-navy font-semibold text-lg px-8 py-6 transition-smooth hover:scale-105"
-              onClick={() => window.open('https://youtu.be/83R0-dXobgU', '_blank')}
-            >
-              Watch Video
-            </Button>
           </div>
 
           <button 

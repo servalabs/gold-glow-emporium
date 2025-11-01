@@ -1,5 +1,3 @@
-import { IMAGES } from '@/images';
-
 export const UnaluNavvanuSection = () => {
   return (
     <section className="py-24 bg-cream relative overflow-hidden">
@@ -29,14 +27,18 @@ export const UnaluNavvanuSection = () => {
               </div>
             </div>
 
-            {/* Image Content */}
-            <div className="relative hover-3d animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            {/* Video Content */}
+            <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
-              <img
-                src={IMAGES.deraser.frontViewJpeg}
-                alt="ઉનાળુ નવ્વાણું યાત્રા"
-                className="relative rounded-lg shadow-elegant w-full h-auto"
-              />
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-elegant border-2 border-gold/30 bg-black/20 backdrop-blur-sm">
+                <iframe
+                  src="https://www.youtube.com/embed/83R0-dXobgU"
+                  title="Ghoghawala Parivar Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
             </div>
           </div>
         </div>
