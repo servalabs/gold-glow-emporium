@@ -11,7 +11,7 @@ export const BenefitsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold text-navy mb-4">
-              <span className="text-gold">99</span> યાત્રામાં શું મેળવશો???
+              <span className="text-gold font-grotesk">99</span> યાત્રામાં શું મેળવશો???
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           </div>
@@ -20,19 +20,19 @@ export const BenefitsSection = () => {
           <div className="grid md:grid-cols-10 gap-8 items-center">
             {/* Text - Takes 3 columns (30%) */}
             <div className="md:col-span-3 space-y-4 animate-fade-in-up order-2 md:order-1">
-              <div className="bg-white p-4 rounded-lg shadow-elegant hover-lift">
+              <div>
                 <p className="font-cormorant text-lg md:text-xl leading-relaxed text-navy">
                   શાશ્વત તીર્થના અદ્વિતીય સ્પર્શનો આનંદ...
                 </p>
               </div>
 
-              <div className="bg-white p-4 rounded-lg shadow-elegant hover-lift">
+              <div>
                 <p className="font-cormorant text-lg md:text-xl leading-relaxed text-navy">
                   અદ્ભુત એવા ભવ્યત્વની છાપ...
                 </p>
               </div>
 
-              <div className="bg-white p-4 rounded-lg shadow-elegant hover-lift">
+              <div>
                 <p className="font-cormorant text-lg md:text-xl leading-relaxed text-navy">
                   જિનઆગમ અને જિનપડિમા પ્રત્યે —
                 </p>
@@ -41,7 +41,7 @@ export const BenefitsSection = () => {
                 </p>
               </div>
 
-              <div className="bg-white p-4 rounded-lg shadow-elegant hover-lift">
+              <div>
                 <p className="font-cormorant text-lg md:text-xl leading-relaxed text-navy">
                   પ્રભુના ભક્ત બની,
                 </p>
@@ -50,7 +50,7 @@ export const BenefitsSection = () => {
                 </p>
               </div>
 
-              <div className="bg-white p-4 rounded-lg shadow-elegant hover-lift">
+              <div>
                 <p className="font-cormorant text-lg md:text-xl leading-relaxed text-navy">
                   અને ગુરુસંગે,
                 </p>
@@ -62,13 +62,15 @@ export const BenefitsSection = () => {
 
             {/* Image - Takes 7 columns (70%) */}
             <div className="md:col-span-7 animate-fade-in-up order-1 md:order-2">
-              <div className="relative hover-3d">
+              <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
-                <img
-                  src={IMAGES.deraser.frontView}
-                  alt="99 યાત્રામાં શું મેળવશો"
-                  className="relative rounded-lg shadow-elegant w-full h-auto"
-                />
+                <div className="relative rounded-lg overflow-hidden shadow-elegant">
+                  <img
+                    src={IMAGES.deraser.frontView}
+                    alt="99 યાત્રામાં શું મેળવશો"
+                    className="w-full h-auto transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -59,51 +59,16 @@ export const GuruSection = () => {
                   <img
                     src={guru.image}
                     alt={guru.name}
-                    className="w-full h-full object-cover object-center transform group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
                     style={{ 
                       objectFit: 'cover',
                       objectPosition: 'center',
                     }}
                   />
                 </div>
-                {(guru.name || guru.title) && (
-                  <div className="mt-3 text-center">
-                    {guru.name && (
-                      <p className="text-sm font-cormorant text-white/90 group-hover:text-gold transition-colors line-clamp-2">
-                        {guru.name}
-                      </p>
-                    )}
-                    {guru.title && (
-                      <p className="text-xs text-gold/70 mt-1">
-                        {guru.title}
-                      </p>
-                    )}
-                  </div>
-                )}
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-gold/20 shadow-elegant">
-          <div className="space-y-4 text-center">
-            <div>
-              <p className="text-gold font-semibold mb-2">૯૯ યાત્રાના પ્રેરણા-દાતા</p>
-              <p className="font-cormorant text-lg">પરમ પૂજ્ય મુનિ શ્રી નિરાગચંદ્ર વિજયજી મહારાજ સાહેબ</p>
-            </div>
-            
-            <div className="pt-4">
-              <p className="text-gold font-semibold mb-2">નિશ્રા દાતા</p>
-              <div className="space-y-2 font-cormorant text-base">
-                <p>પરમ પૂજ્યઆચાર્યદેવ શ્રી શ્રમણચંદ્ર સૂરીશ્વરજી મહારાજ સાહેબ</p>
-                <p>પરમ પૂજ્ય આચાર્યદેવ શ્રી સિદ્ધચંદ્ર સૂરીશ્વરજી મહારાજ સાહેબ</p>
-                <p>પરમ પૂજ્ય આચાર્યદેવ શ્રી શ્રુતચંદ્ર સૂરીશ્વરજી મહારાજ સાહેબ આદિ મુનિ વૃંદ</p>
-                <p>પરમ પૂજ્ય સાધ્વીશ્રી પ્રવિણાશ્રીજી મહારાજ સાહેબ ના શિષ્યા</p>
-                <p>પરમ પૂજ્ય સાધ્વીશ્રી વિનિતયશાશ્રીજી મહારાજ સાહેબ</p>
-                <p>પરમ પૂજ્ય સાધ્વીશ્રી મંગલયશાશ્રીજી મહારાજ સાહેબ. આદિ ઠાણા</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

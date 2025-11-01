@@ -6,6 +6,7 @@ import { GuruSection } from '@/components/GuruSection';
 import { AboutSection } from '@/components/AboutSection';
 import { WhyYatraSection } from '@/components/WhyYatraSection';
 import { BenefitsSection } from '@/components/BenefitsSection';
+import { PreranaDataSection } from '@/components/PreranaDataSection';
 import { Footer } from '@/components/Footer';
 import { ScrollUp } from '@/components/ScrollUp';
 
@@ -20,6 +21,7 @@ const Index = () => {
       <AboutSection />
       <WhyYatraSection />
       <BenefitsSection />
+      <PreranaDataSection />
       <Footer />
       <ScrollUp />
     </div>

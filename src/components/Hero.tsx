@@ -88,18 +88,19 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center pt-24 md:pt-32 lg:pt-40">
         <div className="animate-fade-in-up">
-          <h1 className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+          <h2 className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-4 drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] px-4">
+            Shree Shasan Samrat Ashok Chandroday – <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Summer <span className="font-grotesk">99</span></span>
+          </h2>
+          
+          <h1 className="font-cormorant text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
             <span className="text-gold drop-shadow-[0_4px_12px_rgba(194,143,71,0.6)]">Ghoghawala</span> <span className="drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">Parivar</span>
           </h1>
           
-          <p className="font-cormorant text-2xl md:text-3xl text-white mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-semibold">
+          <p className="font-cormorant text-lg md:text-xl text-white mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-semibold">
             Ghatkopar (Sanghani Estate)
           </p>
 
           <div className="my-8 space-y-2">
-            <h2 className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-semibold text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)] px-4">
-              Shree Shasan Samrat Ashok Chandroday – <span className="text-gold drop-shadow-[0_3px_10px_rgba(194,143,71,0.6)]">Summer 99</span>
-            </h2>
             <h3 className="font-cormorant text-2xl md:text-3xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] font-medium px-4">
               શ્રી સિદ્ધ ગિરિરાજ ૯૯ યાત્રા અનુષ્ઠાન
             </h3>

@@ -1,0 +1,31 @@
+export const PreranaDataSection = () => {
+  return (
+    <section className="py-24 bg-navy text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(194,143,71,0.05)_0%,transparent_70%)]"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-gold/20 shadow-elegant">
+          <div className="space-y-4 text-center">
+            <div>
+              <p className="text-gold font-semibold mb-2">૯૯ યાત્રાના પ્રેરણા-દાતા</p>
+              <p className="font-cormorant text-lg">પરમ પૂજ્ય મુનિ શ્રી નિરાગચંદ્ર વિજયજી મહારાજ સાહેબ</p>
+            </div>
+            
+            <div className="pt-4">
+              <p className="text-gold font-semibold mb-2">નિશ્રા દાતા</p>
+              <div className="space-y-2 font-cormorant text-base">
+                <p>પરમ પૂજ્યઆચાર્યદેવ શ્રી શ્રમણચંદ્ર સૂરીશ્વરજી મહારાજ સાહેબ</p>
+                <p>પરમ પૂજ્ય આચાર્યદેવ શ્રી સિદ્ધચંદ્ર સૂરીશ્વરજી મહારાજ સાહેબ</p>
+                <p>પરમ પૂજ્ય આચાર્યદેવ શ્રી શ્રુતચંદ્ર સૂરીશ્વરજી મહારાજ સાહેબ આદિ મુનિ વૃંદ</p>
+                <p>પરમ પૂજ્ય સાધ્વીશ્રી પ્રવિણાશ્રીજી મહારાજ સાહેબ ના શિષ્યા</p>
+                <p>પરમ પૂજ્ય સાધ્વીશ્રી વિનિતયશાશ્રીજી મહારાજ સાહેબ</p>
+                <p>પરમ પૂજ્ય સાધ્વીશ્રી મંગલયશાશ્રીજી મહારાજ સાહેબ. આદિ ઠાણા</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+

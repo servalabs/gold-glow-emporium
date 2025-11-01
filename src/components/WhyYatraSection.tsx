@@ -11,14 +11,14 @@ export const WhyYatraSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-gold">99</span> યાત્રા કેમ?
+              <span className="text-gold font-grotesk">99</span> યાત્રા કેમ?
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           </div>
 
           <div className="grid md:grid-cols-5 gap-8 items-center">
             {/* Image Card */}
-            <div className="relative hover-3d order-2 md:order-1 md:col-span-2">
+            <div className="relative order-2 md:order-1 md:col-span-2">
               <div className="absolute -inset-4 bg-gradient-gold rounded-lg blur-xl opacity-20"></div>
               <img
                 src={IMAGES.bhagwan.bhagwan2}
@@ -42,13 +42,13 @@ export const WhyYatraSection = () => {
                 તે મહિમાને અનુભવી,
               </p>
               <p className="font-cormorant text-xl md:text-2xl leading-relaxed">
-                તેમણે પોતાના જીવનકાળમાં — પૂર્વ 99 વાર યાત્રા કરી।
+                તેમણે પોતાના જીવનકાળમાં — પૂર્વ <span className="font-grotesk">99</span> વાર યાત્રા કરી।
               </p>
               <p className="font-cormorant text-xl md:text-2xl leading-relaxed">
                 અને આજ સુધી એ પરંપરા જીવંત છે —
               </p>
               <p className="font-cormorant text-xl md:text-2xl leading-relaxed">
-                જ્યાં યાત્રિકો કરે છે <span className="text-gold font-semibold">99 યાત્રા</span>,
+                જ્યાં યાત્રિકો કરે છે <span className="text-gold font-semibold font-grotesk">99</span> યાત્રા,
               </p>
               <p className="font-cormorant text-xl md:text-2xl leading-relaxed">
                 જે માત્ર પગલાં નહીં,
