@@ -82,7 +82,7 @@ export const Header = () => {
                 }`}>
                   Ghoghawala
                 </span>
-                <span className={`font-grotesk text-[10px] md:text-xs tracking-wider uppercase self-end text-right ${
+                <span className={`font-grotesk text-[10px] md:text-xs tracking-wider uppercase block w-full text-right ${
                   isScrolled ? 'text-white/70' : 'text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
                 }`}>
                   Parivar
