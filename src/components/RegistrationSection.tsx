@@ -46,13 +46,16 @@ export const RegistrationSection = () => {
             </div>
           </div>
 
-          {/* Registration Notice */}
+          {/* Register Now CTA */}
           <div className="my-6 md:my-8">
-            <div className="bg-gold/20 backdrop-blur-sm border-2 border-gold/50 rounded-lg px-4 md:px-6 py-3 md:py-4 shadow-lg shadow-gold/30 animate-pulse">
-              <p className="font-grotesk text-base md:text-lg lg:text-xl text-gold font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                📢 Registration will open on <span className="text-white">5th November at 11 AM</span>
-              </p>
-            </div>
+            <a
+              href="https://ghoghawala.com/enroll.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gold text-navy font-grotesk font-bold text-base md:text-lg lg:text-xl px-6 md:px-8 py-3 md:py-4 rounded-lg border border-gold/70 shadow-gold transition-colors hover:bg-gold/90"
+            >
+              Register Now
+            </a>
           </div>
         </div>
       </div>
