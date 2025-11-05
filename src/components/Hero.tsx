@@ -58,11 +58,12 @@ export const Hero = () => {
                 ? 'opacity-100 relative' 
                 : 'opacity-0 pointer-events-none absolute inset-0'
             } ${index === 2 && index === currentSlide ? 'cursor-pointer' : ''}`}
+            style={index === 2 && index === currentSlide ? { zIndex: 10 } : {}}
           >
             <img
               src={slide}
               alt={`Slide ${index + 1}`}
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain pointer-events-none"
               style={{
                 filter: 'brightness(0.8)',
                 WebkitFilter: 'brightness(0.8)',
@@ -131,9 +132,12 @@ export const Hero = () => {
 
       {/* Slide3 Intro Text and Button - Only visible when slide3 is active */}
       {currentSlide === 2 && (
-        <div className="absolute inset-0 z-[15] flex items-end justify-end pr-4 md:pr-8 lg:pr-12 pb-24 md:pb-8 lg:pb-12">
-          <div className="text-center max-w-[180px] md:max-w-sm lg:max-w-md animate-fade-in">
-            <div className="bg-navy/90 backdrop-blur-md rounded-lg p-3 md:p-6 lg:p-7 border border-gold/30 shadow-2xl">
+        <div 
+          className="absolute inset-0 z-[30] flex items-end justify-end pr-4 md:pr-8 lg:pr-12 pb-24 md:pb-8 lg:pb-12 pointer-events-none"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="text-center max-w-[180px] md:max-w-sm lg:max-w-md animate-fade-in pointer-events-auto">
+            <div className="bg-navy/90 backdrop-blur-md rounded-lg p-3 md:p-6 lg:p-7 border border-gold/30 shadow-2xl pointer-events-auto">
               <h3 className="font-cormorant text-sm md:text-xl lg:text-2xl font-bold text-gold mb-3 md:mb-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-tight">
                 Shree Shasan Samrat Ashok Chandrodaya <span className="font-grotesk">Unalu 99</span>
               </h3>
@@ -141,8 +145,11 @@ export const Hero = () => {
                 Join us for the divine pilgrimage
               </p>
               <button
-                onClick={handleSlide3Click}
-                className="inline-flex items-center justify-center gap-2 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-3.5 bg-gold text-navy font-semibold text-xs md:text-sm lg:text-base rounded-lg hover:bg-gold/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-gold/50 border border-gold/60 w-full"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleSlide3Click();
+                }}
+                className="inline-flex items-center justify-center gap-2 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-3.5 bg-gold text-navy font-semibold text-xs md:text-sm lg:text-base rounded-lg hover:bg-gold/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-gold/50 border border-gold/60 w-full pointer-events-auto relative z-[31]"
               >
                 <span>Learn More</span>
                 <svg className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
