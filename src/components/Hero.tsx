@@ -43,7 +43,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative h-auto md:min-h-screen flex items-center justify-center overflow-hidden bg-navy pt-24 md:pt-28">
+    <section className="relative h-auto md:min-h-screen flex items-center justify-center overflow-hidden bg-navy pt-24 md:pt-28" style={{ isolation: 'isolate' }}>
       {/* Background base color for any empty space - desktop only */}
       <div className="hidden md:block absolute inset-0 bg-navy" />
       
@@ -131,57 +131,68 @@ export const Hero = () => {
 
       {/* Slide3 Intro Text and Button - Only visible when slide3 is active */}
       {currentSlide === 2 && (
-        <div 
-          className="absolute inset-0 z-[50] flex items-end justify-end pr-4 md:pr-8 lg:pr-12 pb-24 md:pb-8 lg:pb-12"
-          style={{ pointerEvents: 'none' }}
-          onTouchStart={(e) => e.stopPropagation()}
-          onTouchEnd={(e) => e.stopPropagation()}
-          onClick={(e) => e.stopPropagation()}
-        >
+        <>
+          {/* Text and Button Container - Positioned absolutely */}
           <div 
-            className="text-center max-w-[180px] md:max-w-sm lg:max-w-md animate-fade-in"
-            style={{ pointerEvents: 'auto', touchAction: 'manipulation' }}
+            className="absolute bottom-24 md:bottom-8 lg:bottom-12 right-4 md:right-8 lg:right-12 z-[9999]"
+            style={{ 
+              pointerEvents: 'auto',
+              touchAction: 'manipulation',
+              WebkitTouchCallout: 'none',
+              WebkitUserSelect: 'none',
+              userSelect: 'none'
+            }}
           >
-            <div 
-              className="bg-navy/90 backdrop-blur-md rounded-lg p-3 md:p-6 lg:p-7 border border-gold/30 shadow-2xl"
-              style={{ pointerEvents: 'auto', touchAction: 'manipulation' }}
-            >
-              <h3 className="font-cormorant text-sm md:text-xl lg:text-2xl font-bold text-gold mb-3 md:mb-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-tight">
-                Shree Shasan Samrat Ashok Chandrodaya <span className="font-grotesk">Unalu 99</span>
-              </h3>
-              <p className="font-cormorant text-xs md:text-sm lg:text-base text-white/90 mb-3 md:mb-5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] leading-tight">
-                Join us for the divine pilgrimage
-              </p>
-              <button
-                onTouchStart={(e) => {
-                  e.stopPropagation();
-                }}
-                onTouchEnd={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  handleSlide3Click();
-                }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  handleSlide3Click();
-                }}
-                className="inline-flex items-center justify-center gap-2 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-3.5 bg-gold text-navy font-semibold text-xs md:text-sm lg:text-base rounded-lg hover:bg-gold/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-gold/50 border border-gold/60 w-full relative z-[51]"
-                style={{ 
-                  pointerEvents: 'auto', 
-                  touchAction: 'manipulation',
-                  WebkitTapHighlightColor: 'transparent',
-                  zIndex: 51
-                }}
-              >
-                <span>Learn More</span>
-                <svg className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </button>
+            <div className="text-center max-w-[180px] md:max-w-sm lg:max-w-md animate-fade-in">
+              <div className="bg-navy/90 backdrop-blur-md rounded-lg p-3 md:p-6 lg:p-7 border border-gold/30 shadow-2xl">
+                <h3 className="font-cormorant text-sm md:text-xl lg:text-2xl font-bold text-gold mb-3 md:mb-5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-tight">
+                  Shree Shasan Samrat Ashok Chandrodaya <span className="font-grotesk">Unalu 99</span>
+                </h3>
+                <p className="font-cormorant text-xs md:text-sm lg:text-base text-white/90 mb-3 md:mb-5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] leading-tight">
+                  Join us for the divine pilgrimage
+                </p>
+                <button
+                  type="button"
+                  onTouchStart={(e) => {
+                    e.stopPropagation();
+                  }}
+                  onTouchEnd={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleSlide3Click();
+                  }}
+                  onTouchCancel={(e) => {
+                    e.stopPropagation();
+                  }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleSlide3Click();
+                  }}
+                  onMouseDown={(e) => {
+                    e.stopPropagation();
+                  }}
+                  className="inline-flex items-center justify-center gap-2 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-3.5 bg-gold text-navy font-semibold text-xs md:text-sm lg:text-base rounded-lg hover:bg-gold/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-gold/50 border border-gold/60 w-full cursor-pointer"
+                  style={{ 
+                    pointerEvents: 'auto', 
+                    touchAction: 'manipulation',
+                    WebkitTapHighlightColor: 'transparent',
+                    WebkitTouchCallout: 'none',
+                    WebkitUserSelect: 'none',
+                    userSelect: 'none',
+                    position: 'relative',
+                    zIndex: 10000
+                  }}
+                >
+                  <span>Learn More</span>
+                  <svg className="w-3.5 h-3.5 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </section>
   );
